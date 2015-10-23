@@ -24,6 +24,7 @@ namespace Main
         }
         public DataTable Insert(string _ten, string _gt, int _sdt, DateTime _ns, string _monhoc, long _luong)
         {
+            //string str = string.Format("insert into tblGiaoVien (")
             SqlDataAdapter da = new SqlDataAdapter();
             DataSet ds = new DataSet();
             SqlConnection con = new SqlConnection(strcon);
