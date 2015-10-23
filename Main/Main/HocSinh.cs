@@ -10,7 +10,7 @@ namespace Main
 {
     public class HocSinh
     {
-        string strcon = @"Data Source=HOA_LONG\SQLEXPRESS; Initial Catalog=TruongTHPT; Integrated Security=true;";
+        string strcon = @"Data Source=PHAMVANLUONG\SQLEXPRESS; Initial Catalog=TruongTHPT; Integrated Security=true;";
         public DataTable Show()
         {
             DataTable dt = new DataTable();

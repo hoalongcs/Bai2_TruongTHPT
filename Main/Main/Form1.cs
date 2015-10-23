@@ -22,13 +22,24 @@ namespace Main
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tc.Visible = true;
+
             dgvGiaoVien.DataSource = gv.Show();
         }
 
         private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tcHS.Visible = true;
+            tc.Visible = true;
             dgvHocSinh.DataSource = hs.Show();
+        }
+        public void DieuKhienGV(bool b)
+        {
+            txtHoTenGV.Enabled = txtLuong.Enabled = txtMaGV.Enabled = txtSDT.Enabled = b;
+            cbGTGV.Enabled = cbMonHoc.Enabled = dtpNgaySinhGV.Enabled = b;
+        }
+        public void DieuKhienHS(bool b)
+        {
+            txtHoTen_HS.Enabled = txtMa_HS.Enabled = txtPhuHuynh.Enabled  = b;
+            cbGT_HS.Enabled = cbNgaySinh_HS.Enabled = cbLop.Enabled = b;
         }
     }
 }
