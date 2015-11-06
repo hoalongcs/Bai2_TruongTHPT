@@ -22,5 +22,22 @@ namespace Main
             da.Dispose();
             return dt;
         }
+        public void ThemHocSinh(string HovaTen, string GT, DateTime NgaySinh, string DiaChi, string PhuHuynh, string MaLop)
+        {
+            string sql = "ADDHocSinh";
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@HovaTen", HovaTen);
+            cmd.Parameters.AddWithValue("@GT", GT);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@PhuHuynh", PhuHuynh);
+            cmd.Parameters.AddWithValue("@MaLop", MaLop);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
     }
 }
