@@ -17,29 +17,16 @@ namespace Main
             InitializeComponent();
         }
 
-        GiaoVien gv = new GiaoVien();
-        HocSinh hs = new HocSinh();
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tc.Visible = true;
-
-            dgvGiaoVien.DataSource = gv.Show();
+            Giao_Vien gv = new Giao_Vien();
+            gv.Show();
         }
 
         private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tc.Visible = true;
-            dgvHocSinh.DataSource = hs.Show();
-        }
-        public void DieuKhienGV(bool b)
-        {
-            txtHoTenGV.Enabled = txtLuong.Enabled = txtMaGV.Enabled = txtSDT.Enabled = b;
-            cbGTGV.Enabled = cbMonHoc.Enabled = dtpNgaySinhGV.Enabled = b;
-        }
-        public void DieuKhienHS(bool b)
-        {
-            txtHoTen_HS.Enabled = txtMa_HS.Enabled = txtPhuHuynh.Enabled  = b;
-            cbGT_HS.Enabled = cbNgaySinh_HS.Enabled = cbLop.Enabled = b;
+            Hoc_Sinh hs = new Hoc_Sinh();
+            hs.Show();
         }
     }
 }
