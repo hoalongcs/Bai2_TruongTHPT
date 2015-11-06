@@ -23,15 +23,22 @@ namespace Main
             da.Dispose();
             return dt;
         }
+<<<<<<< HEAD
 
         //Sủa 
         public void Sua_HS(string MaHS, string HoTen, string GT, string NgaySinh, string DiaChi, string PhuHuynh, string MaLop)
         {
             string sql = "Sua_HS";
+=======
+        public void ThemHocSinh(string HovaTen, string GT, DateTime NgaySinh, string DiaChi, string PhuHuynh, string MaLop)
+        {
+            string sql = "ADDHocSinh";
+>>>>>>> origin/master
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
             cmd.Parameters.AddWithValue("@HovaTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
             cmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
@@ -39,10 +46,19 @@ namespace Main
             cmd.Parameters.AddWithValue("@PhuHuynh", PhuHuynh);
             cmd.Parameters.AddWithValue("@MaLop", MaLop);
             cmd.Parameters.AddWithValue("@MaHS", MaHS);
+=======
+            cmd.Parameters.AddWithValue("@HovaTen", HovaTen);
+            cmd.Parameters.AddWithValue("@GT", GT);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@PhuHuynh", PhuHuynh);
+            cmd.Parameters.AddWithValue("@MaLop", MaLop);
+>>>>>>> origin/master
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
         }
+<<<<<<< HEAD
 
         // Xóa
         public void Xoa_HS(string MaHS)
@@ -67,5 +83,7 @@ namespace Main
             da.Fill(dt);
             return dt;
         }
+=======
+>>>>>>> origin/master
     }
 }

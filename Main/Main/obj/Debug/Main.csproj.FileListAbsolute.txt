@@ -7,6 +7,7 @@ E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Properties.Resources.resourc
 E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
 E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.exe
 E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.pdb
+<<<<<<< HEAD
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.exe.config
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.exe
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.pdb
@@ -18,3 +19,8 @@ E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Hoc_Sinh.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Properties.Resources.resources
 E:\Hoc tap\Ki I 2015-2016\Thuc tap nhom\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
+=======
+E:\Clone\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.exe.config
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.exe
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.pdb
+>>>>>>> origin/master
