@@ -1,0 +1,5 @@
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.dll
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.pdb
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.dll
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.pdb

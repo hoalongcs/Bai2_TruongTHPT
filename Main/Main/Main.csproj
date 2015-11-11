@@ -50,14 +50,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVien.cs" />
     <Compile Include="Giao_Vien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Giao_Vien.Designer.cs">
       <DependentUpon>Giao_Vien.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocSinh.cs" />
     <Compile Include="Hoc_Sinh.cs">
       <SubType>Form</SubType>
     </Compile>
