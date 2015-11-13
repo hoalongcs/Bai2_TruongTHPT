@@ -13,7 +13,7 @@ namespace Main
         string strcon = @"Data Source=HOA_LONG\SQLEXPRESS; Initial Catalog=TruongTHPT; Integrated Security=true;";
         public DataTable Show()
         {
-            string sql = "select gv.MaGV, gv.HoTen, gv.GT, gv.DiaChi, gv.NgaySinh, gv.Luong, gv.SDT, mh.TenMon from tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
+            string sql = "select gv.MaGV, gv.HoTen, gv.GT, gv.NgaySinh, gv.DiaChi, gv.Luong, gv.SDT, mh.TenMon from tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
@@ -22,21 +22,6 @@ namespace Main
             con.Close();
             da.Dispose();
             return dt;
-        }
-        public DataTable Insert(string _ten, string _gt, int _sdt, DateTime _ns, string _monhoc, long _luong)
-        {
-            //string str = string.Format("insert into tblGiaoVien (")
-            SqlDataAdapter da = new SqlDataAdapter();
-            DataSet ds = new DataSet();
-            SqlConnection con = new SqlConnection(strcon);
-            SqlCommand cmd = new SqlCommand();
-            SqlParameter[] para = new SqlParameter[6];
-            //para[0].ParameterName = new SqlParameter("@ten", _ten);
-            para[0].Value = _ten;
-            //para[1].ParameterName = 
-            da.Fill(ds);
-            
-            return ds.Tables[0];
         }
 
         //Sua 
@@ -82,6 +67,26 @@ namespace Main
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
             da.Fill(dt);
             return dt;
+        }
+
+        // Thêm giáo viên
+        public void ThemGiaoVien(string HoTen, string GT, DateTime NgaySinh, string DiaChi, string SDT, string Luong, string MaMon)
+        {
+            string sql = "ADD_GV";
+            SqlConnection con = new SqlConnection(strcon);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@HoTen", HoTen);
+            cmd.Parameters.AddWithValue("@GT", GT);
+            cmd.Parameters.AddWithValue("@NgaySinh", (NgaySinh));
+            cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@SDT", SDT);
+            cmd.Parameters.AddWithValue("@Luong", Luong);
+            cmd.Parameters.AddWithValue("@MaMon", MaMon);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
         }
     }
 }

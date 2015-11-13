@@ -22,16 +22,18 @@ namespace Main
 
         public void KhoiTao()
         {
-            txtHoTenGV.Enabled = txtLuong.Enabled = txtMaGV.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = false;
-            btnSua.Enabled = btnThem.Enabled = btnTK.Enabled = btnXoa.Enabled = true;
+            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = false;
+            btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
+            dtpNgaySinhGV.Enabled = false;
         }
 
         public void Mo()
         {
-            txtHoTenGV.Enabled = txtLuong.Enabled = txtMaGV.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = true;
-            btnSua.Enabled = btnThem.Enabled = btnTK.Enabled = btnXoa.Enabled = false;
+            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = true;
+            btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
+            dtpNgaySinhGV.Enabled = true;
         }
 
         public void SetNull()
@@ -54,8 +56,8 @@ namespace Main
 
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
+           // try
+           // {
                 txtMaGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtHoTenGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cbGTGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -64,8 +66,8 @@ namespace Main
                 txtSDT.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtLuong.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[6].Value.ToString();
                 cbMonHoc.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[7].Value.ToString();
-            }
-            catch { }
+          //  }
+           // catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -84,7 +86,6 @@ namespace Main
             Mo();
             SetNull();
             btnTK.Enabled = txtTKGV.Enabled = cbTKGV.Enabled = true;
-            txtMaGV.Enabled = false;
             chon = 1;
         }
 
@@ -96,15 +97,43 @@ namespace Main
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
                 else
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        gv.Sua_GV(txtMaGV.Text, txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.Text);
+                        gv.Sua_GV(txtMaGV.Text, txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
                         MessageBox.Show("Sửa thành công!");
                         SetNull();
                         Giao_Vien_Load(sender, e);
                     }
                 }
             }
+            else if (chon == 2)
+            {
+                if (txtHoTenGV.Text == "" || cbGTGV.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cbMonHoc.Text == "" || dtpNgaySinhGV.Text == "" || txtLuong.Text == "")
+                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    {
+                        gv.ThemGiaoVien(txtHoTenGV.Text, cbGTGV.Text, DateTime.Parse(dtpNgaySinhGV.Text), txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
+                        MessageBox.Show("Thêm thành công!");
+                        SetNull();
+                        Giao_Vien_Load(sender, e);
+                    }
+                }
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Giao_Vien_Load(sender, e);
+            SetNull();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Mo();
+            SetNull();
+            chon = 2;
         }
     }
 }

@@ -22,15 +22,15 @@ namespace Main
 
         public void KhoiTao()
         {
-            txtMa_HS.Enabled = txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = txtTK_HS.Enabled = cbGT_HS.Enabled = cbLop.Enabled = cbTK_HS.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = false;
-            btnThem_HS.Enabled = btnSua_HS.Enabled = btnXoa_HS.Enabled = btnTK_HS.Enabled = true;
+            txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = cbGT_HS.Enabled = cbLop.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = false;
+            btnThem_HS.Enabled = btnSua_HS.Enabled = btnXoa_HS.Enabled = true;
             btnLuu_HS.Enabled = false;
         }
 
         public void Mo()
         {
-            txtMa_HS.Enabled = txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = txtTK_HS.Enabled = cbGT_HS.Enabled = cbLop.Enabled = cbTK_HS.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = true;
-            btnThem_HS.Enabled = btnSua_HS.Enabled = btnXoa_HS.Enabled = btnTK_HS.Enabled = false;
+            txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = cbGT_HS.Enabled = cbLop.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = true;
+            btnThem_HS.Enabled = btnSua_HS.Enabled = btnXoa_HS.Enabled = false;
             btnLuu_HS.Enabled = true;
         }
 
@@ -86,12 +86,27 @@ namespace Main
                 {
                     if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        hs.Sua_HS(txtMa_HS.Text, txtHoTen_HS.Text, cbGT_HS.Text, dtpNgaySinh_HS.Text, txtDiaChi.Text, txtPhuHuynh.Text, cbLop.Text);
+                        hs.Sua_HS(txtMa_HS.Text, txtHoTen_HS.Text, cbGT_HS.Text, dtpNgaySinh_HS.Text, txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
                         MessageBox.Show("Sửa thành công!");
                         SetNull();
                         Hoc_Sinh_Load(sender, e);
                     }
                 } 
+            }
+            else if (chon == 2)
+            {
+                if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
+                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    {
+                        hs.ThemHocSinh(txtHoTen_HS.Text, cbGT_HS.Text, DateTime.Parse(dtpNgaySinh_HS.Text), txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
+                        MessageBox.Show("Thêm thành công!");
+                        SetNull();
+                        Hoc_Sinh_Load(sender, e);
+                    }
+                }
             }
 
         }
@@ -106,6 +121,19 @@ namespace Main
             cbLop.ValueMember = "MaLop";
             cbLop.SelectedValue = "MaLop";
             chon = 0;
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Hoc_Sinh_Load(sender, e);
+            SetNull();
+        }
+
+        private void btnThem_HS_Click(object sender, EventArgs e)
+        {
+            Mo();
+            SetNull();
+            chon = 2;
         }
     }
 }

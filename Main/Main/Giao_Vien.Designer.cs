@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnTK = new System.Windows.Forms.Button();
             this.txtTKGV = new System.Windows.Forms.TextBox();
@@ -52,9 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -101,15 +103,31 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // btnHuy
             // 
-            this.groupBox2.Controls.Add(this.dgvGiaoVien);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 237);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(999, 278);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.btnHuy.Location = new System.Drawing.Point(893, 190);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 34);
+            this.btnHuy.TabIndex = 45;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(409, 123);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(177, 20);
+            this.txtDiaChi.TabIndex = 44;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(325, 126);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "Địa chỉ";
             // 
             // label8
             // 
@@ -149,7 +167,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(893, 167);
+            this.btnLuu.Location = new System.Drawing.Point(893, 150);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 34);
             this.btnLuu.TabIndex = 38;
@@ -159,7 +177,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(893, 126);
+            this.btnXoa.Location = new System.Drawing.Point(893, 110);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 34);
             this.btnXoa.TabIndex = 37;
@@ -169,7 +187,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(893, 85);
+            this.btnSua.Location = new System.Drawing.Point(798, 150);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 34);
             this.btnSua.TabIndex = 36;
@@ -179,20 +197,23 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(893, 44);
+            this.btnThem.Location = new System.Drawing.Point(798, 110);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 34);
             this.btnThem.TabIndex = 35;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dtpNgaySinhGV
             // 
+            this.dtpNgaySinhGV.CustomFormat = "dd/MM/yyyy";
             this.dtpNgaySinhGV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinhGV.Location = new System.Drawing.Point(409, 77);
             this.dtpNgaySinhGV.Name = "dtpNgaySinhGV";
             this.dtpNgaySinhGV.Size = new System.Drawing.Size(121, 20);
             this.dtpNgaySinhGV.TabIndex = 34;
+            this.dtpNgaySinhGV.Value = new System.DateTime(2015, 11, 13, 0, 0, 0, 0);
             // 
             // cbMonHoc
             // 
@@ -290,6 +311,7 @@
             // 
             // txtMaGV
             // 
+            this.txtMaGV.Enabled = false;
             this.txtMaGV.Location = new System.Drawing.Point(115, 35);
             this.txtMaGV.Name = "txtMaGV";
             this.txtMaGV.Size = new System.Drawing.Size(177, 20);
@@ -303,6 +325,16 @@
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 21;
             this.label1.Text = "Mã GV";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvGiaoVien);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 237);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(999, 278);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
             // 
             // dgvGiaoVien
             // 
@@ -319,25 +351,10 @@
             this.dgvGiaoVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGiaoVien.Location = new System.Drawing.Point(3, 16);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
+            this.dgvGiaoVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGiaoVien.Size = new System.Drawing.Size(993, 259);
             this.dgvGiaoVien.TabIndex = 0;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(409, 123);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(177, 20);
-            this.txtDiaChi.TabIndex = 44;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(325, 126);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "Địa chỉ";
             // 
             // Column1
             // 
@@ -392,7 +409,7 @@
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column8.DataPropertyName = "TenMon";
-            this.Column8.HeaderText = "Mã Môn";
+            this.Column8.HeaderText = "Môn Học";
             this.Column8.Name = "Column8";
             // 
             // Giao_Vien
@@ -404,7 +421,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Giao_Vien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giao_Vien";
+            this.Text = "Giáo Viên";
             this.Load += new System.EventHandler(this.Giao_Vien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -443,6 +460,7 @@
         private System.Windows.Forms.DataGridView dgvGiaoVien;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

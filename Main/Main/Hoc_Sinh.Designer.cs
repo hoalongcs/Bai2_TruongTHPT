@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label9);
@@ -95,6 +97,16 @@
             this.groupBox1.Size = new System.Drawing.Size(983, 213);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(884, 160);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 34);
+            this.btnHuy.TabIndex = 65;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // txtDiaChi
             // 
@@ -150,7 +162,7 @@
             // 
             // btnLuu_HS
             // 
-            this.btnLuu_HS.Location = new System.Drawing.Point(885, 159);
+            this.btnLuu_HS.Location = new System.Drawing.Point(884, 112);
             this.btnLuu_HS.Name = "btnLuu_HS";
             this.btnLuu_HS.Size = new System.Drawing.Size(75, 34);
             this.btnLuu_HS.TabIndex = 58;
@@ -160,7 +172,7 @@
             // 
             // btnXoa_HS
             // 
-            this.btnXoa_HS.Location = new System.Drawing.Point(885, 118);
+            this.btnXoa_HS.Location = new System.Drawing.Point(884, 64);
             this.btnXoa_HS.Name = "btnXoa_HS";
             this.btnXoa_HS.Size = new System.Drawing.Size(75, 34);
             this.btnXoa_HS.TabIndex = 57;
@@ -170,7 +182,7 @@
             // 
             // btnSua_HS
             // 
-            this.btnSua_HS.Location = new System.Drawing.Point(885, 77);
+            this.btnSua_HS.Location = new System.Drawing.Point(790, 112);
             this.btnSua_HS.Name = "btnSua_HS";
             this.btnSua_HS.Size = new System.Drawing.Size(75, 34);
             this.btnSua_HS.TabIndex = 56;
@@ -180,12 +192,13 @@
             // 
             // btnThem_HS
             // 
-            this.btnThem_HS.Location = new System.Drawing.Point(885, 36);
+            this.btnThem_HS.Location = new System.Drawing.Point(790, 64);
             this.btnThem_HS.Name = "btnThem_HS";
             this.btnThem_HS.Size = new System.Drawing.Size(75, 34);
             this.btnThem_HS.TabIndex = 55;
             this.btnThem_HS.Text = "Thêm";
             this.btnThem_HS.UseVisualStyleBackColor = true;
+            this.btnThem_HS.Click += new System.EventHandler(this.btnThem_HS_Click);
             // 
             // dtpNgaySinh_HS
             // 
@@ -275,6 +288,7 @@
             // 
             // txtMa_HS
             // 
+            this.txtMa_HS.Enabled = false;
             this.txtMa_HS.Location = new System.Drawing.Point(107, 27);
             this.txtMa_HS.Name = "txtMa_HS";
             this.txtMa_HS.Size = new System.Drawing.Size(177, 20);
@@ -313,6 +327,7 @@
             this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHocSinh.Location = new System.Drawing.Point(3, 16);
             this.dgvHocSinh.Name = "dgvHocSinh";
+            this.dgvHocSinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHocSinh.Size = new System.Drawing.Size(977, 254);
             this.dgvHocSinh.TabIndex = 0;
             this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
@@ -375,7 +390,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Hoc_Sinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hoc_Sinh";
+            this.Text = "Học Sinh";
             this.Load += new System.EventHandler(this.Hoc_Sinh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -419,5 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button btnHuy;
     }
 }
