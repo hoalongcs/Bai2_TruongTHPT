@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace Main
 {
@@ -19,10 +20,12 @@ namespace Main
 
         GiaoVien gv = new GiaoVien();
         int chon;
+        TimKiem tk = new TimKiem();
+        
 
         public void KhoiTao()
         {
-            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = false;
+            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = txtDiaChi.Enabled = false;
             btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
             dtpNgaySinhGV.Enabled = false;
@@ -30,7 +33,7 @@ namespace Main
 
         public void Mo()
         {
-            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = txtTKGV.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = cbTKGV.Enabled = txtDiaChi.Enabled = true;
+            txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = txtDiaChi.Enabled = true;
             btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             dtpNgaySinhGV.Enabled = true;
@@ -85,7 +88,7 @@ namespace Main
         {
             Mo();
             SetNull();
-            btnTK.Enabled = txtTKGV.Enabled = cbTKGV.Enabled = true;
+            txtTKGV.Enabled = cbTKGV.Enabled = true;
             chon = 1;
         }
 
@@ -99,7 +102,7 @@ namespace Main
                 {
                     if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        gv.Sua_GV(txtMaGV.Text, txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
+                        gv.Sua_GV(txtMaGV.Text, txtHoTenGV.Text, cbGTGV.Text, (dtpNgaySinhGV.Text), txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
                         MessageBox.Show("Sửa thành công!");
                         SetNull();
                         Giao_Vien_Load(sender, e);
@@ -114,7 +117,7 @@ namespace Main
                 {
                     if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        gv.ThemGiaoVien(txtHoTenGV.Text, cbGTGV.Text, DateTime.Parse(dtpNgaySinhGV.Text), txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
+                        gv.ADDGiaoVien(txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
                         MessageBox.Show("Thêm thành công!");
                         SetNull();
                         Giao_Vien_Load(sender, e);
@@ -134,6 +137,14 @@ namespace Main
             Mo();
             SetNull();
             chon = 2;
+        }
+
+        private void txtTKGV_TextChanged(object sender, EventArgs e)
+        {
+            if (cbTKGV.Text == "Mã")
+                dgvGiaoVien.DataSource = tk.TK_Ma_GiaoVien(txtTKGV.Text);
+            else
+                dgvGiaoVien.DataSource = tk.TKTenGiaoVien(txtTKGV.Text);
         }
     }
 }

@@ -113,3 +113,30 @@ CLOSE contro
 DEALLOCATE contro
 END
 
+--tim hoc sinh theo ma
+CREATE PROC TK_HS_Ma (@MaHS nchar(10))
+AS
+BEGIN
+	SELECT * FROM tblHocSinh WHERE MaHS like N'%' + @MaHS + '%'
+END
+
+--tim hoc sinh theo ten
+CREATE PROC TK_HS_HoTen (@HoTen nvarchar(50))
+AS
+BEGIN
+	SELECT * FROM tblHocSinh WHERE HovaTen like N'%' + @HoTen + '%'
+END
+
+--tim giao vien theo ma
+CREATE PROC TK_GV_Ma (@MaGV nchar(10))
+AS
+BEGIN
+	SELECT * FROM tblGiaoVien WHERE MaGV like N'%' + @MaGV + '%'
+END
+
+--tim giao vien theo ten
+CREATE PROC TK_GV_HoTen (@HoTen nvarchar(50))
+AS
+BEGIN
+	SELECT * FROM tblGiaoVien WHERE HoTen like N'%' + @HoTen + '%'
+END

@@ -28,5 +28,10 @@ namespace Main
             Hoc_Sinh hs = new Hoc_Sinh();
             hs.Show();
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

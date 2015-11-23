@@ -12,7 +12,7 @@ namespace BUS
     {
         public DataTable Show()
         {
-            string sql = "select hs.DiaChi, hs.GT, hs.HovaTen, hs.MaHS, hs.NgaySinh, hs.PhuHuynh, lop.TenLop from tblHocSinh hs, tblLop lop where hs.MaLop = lop.MaLop";
+            string sql = "select hs.MaHS, hs.HovaTen, hs.GT, hs.NgaySinh, hs.DiaChi, hs.PhuHuynh, lop.TenLop from tblHocSinh hs, tblLop lop where hs.MaLop = lop.MaLop";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
             con.Open();
@@ -31,19 +31,20 @@ namespace BUS
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@HoTen", HoTen);
+            cmd.Parameters.AddWithValue("@HovaTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
             cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
             cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
             cmd.Parameters.AddWithValue("@PhuHuynh", PhuHuynh);
             cmd.Parameters.AddWithValue("@MaLop", MaLop);
+            cmd.Parameters.AddWithValue("@MaHS", MaHS);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
         }
         public void ThemHocSinh(string HovaTen, string GT, DateTime NgaySinh, string DiaChi, string PhuHuynh, string MaLop)
         {
-            string sql = "ADDHocSinh";
+            string sql = "ADD_HocSinh";
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);

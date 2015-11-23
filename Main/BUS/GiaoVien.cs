@@ -12,7 +12,7 @@ namespace BUS
     {
         public DataTable Show()
         {
-            string sql = "select gv.MaGV, gv.HoTen, gv.GT, gv.DiaChi, gv.NgaySinh, gv.Luong, gv.SDT, mh.TenMon from tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
+            string sql = "select gv.MaGV, gv.HoTen, gv.GT, gv.NgaySinh, gv.DiaChi, gv.Luong, gv.SDT, mh.TenMon from tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
             con.Open();
@@ -22,19 +22,19 @@ namespace BUS
             da.Dispose();
             return dt;
         }
-        public void ADDGiaoVien(string HoTen, string GT, DateTime NgaySinh, string DiaChi, int SDT, int Luong, string MaMon)
+        public void ADDGiaoVien(string HoTen, string GT, string NgaySinh, string DiaChi, string SDT, string Luong, string MaMon)
         {
-            string sql = "ADDGiaoVien";
+            string sql = "ADD_GV";
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@HoTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
-            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
             cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
-            cmd.Parameters.AddWithValue("@SDT", SDT);
-            cmd.Parameters.AddWithValue("@Luong", Luong);
+            cmd.Parameters.AddWithValue("@SDT", int.Parse(SDT));
+            cmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
             cmd.Parameters.AddWithValue("@MaMon", MaMon);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -51,10 +51,10 @@ namespace BUS
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@HoTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
-            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
             cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
-            cmd.Parameters.AddWithValue("@SDT", SDT);
-            cmd.Parameters.AddWithValue("@Luong", Luong);
+            cmd.Parameters.AddWithValue("@SDT", int.Parse(SDT));
+            cmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
             cmd.Parameters.AddWithValue("@MaMon", Mon);
             cmd.Parameters.AddWithValue("@MaGV", MaGV);
             cmd.ExecuteNonQuery();

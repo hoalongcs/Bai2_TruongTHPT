@@ -33,7 +33,6 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnTK_HS = new System.Windows.Forms.Button();
             this.txtTK_HS = new System.Windows.Forms.TextBox();
             this.cbTK_HS = new System.Windows.Forms.ComboBox();
             this.btnLuu_HS = new System.Windows.Forms.Button();
@@ -72,7 +71,6 @@
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.btnTK_HS);
             this.groupBox1.Controls.Add(this.txtTK_HS);
             this.groupBox1.Controls.Add(this.cbTK_HS);
             this.groupBox1.Controls.Add(this.btnLuu_HS);
@@ -133,21 +131,13 @@
             this.label9.TabIndex = 62;
             this.label9.Text = "Tìm kiếm";
             // 
-            // btnTK_HS
-            // 
-            this.btnTK_HS.Location = new System.Drawing.Point(620, 170);
-            this.btnTK_HS.Name = "btnTK_HS";
-            this.btnTK_HS.Size = new System.Drawing.Size(75, 22);
-            this.btnTK_HS.TabIndex = 61;
-            this.btnTK_HS.Text = "Tìm kiếm";
-            this.btnTK_HS.UseVisualStyleBackColor = true;
-            // 
             // txtTK_HS
             // 
             this.txtTK_HS.Location = new System.Drawing.Point(406, 170);
             this.txtTK_HS.Name = "txtTK_HS";
             this.txtTK_HS.Size = new System.Drawing.Size(177, 20);
             this.txtTK_HS.TabIndex = 60;
+            this.txtTK_HS.TextChanged += new System.EventHandler(this.txtTK_HS_TextChanged);
             // 
             // cbTK_HS
             // 
@@ -404,7 +394,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnTK_HS;
         private System.Windows.Forms.TextBox txtTK_HS;
         private System.Windows.Forms.ComboBox cbTK_HS;
         private System.Windows.Forms.Button btnLuu_HS;

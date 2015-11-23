@@ -33,7 +33,6 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnTK = new System.Windows.Forms.Button();
             this.txtTKGV = new System.Windows.Forms.TextBox();
             this.cbTKGV = new System.Windows.Forms.ComboBox();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -75,7 +74,6 @@
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.btnTK);
             this.groupBox1.Controls.Add(this.txtTKGV);
             this.groupBox1.Controls.Add(this.cbTKGV);
             this.groupBox1.Controls.Add(this.btnLuu);
@@ -138,21 +136,13 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Tìm kiếm";
             // 
-            // btnTK
-            // 
-            this.btnTK.Location = new System.Drawing.Point(628, 178);
-            this.btnTK.Name = "btnTK";
-            this.btnTK.Size = new System.Drawing.Size(75, 22);
-            this.btnTK.TabIndex = 41;
-            this.btnTK.Text = "Tìm kiếm";
-            this.btnTK.UseVisualStyleBackColor = true;
-            // 
             // txtTKGV
             // 
             this.txtTKGV.Location = new System.Drawing.Point(414, 178);
             this.txtTKGV.Name = "txtTKGV";
             this.txtTKGV.Size = new System.Drawing.Size(177, 20);
             this.txtTKGV.TabIndex = 40;
+            this.txtTKGV.TextChanged += new System.EventHandler(this.txtTKGV_TextChanged);
             // 
             // cbTKGV
             // 
@@ -207,7 +197,7 @@
             // 
             // dtpNgaySinhGV
             // 
-            this.dtpNgaySinhGV.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgaySinhGV.CustomFormat = "MM/dd/yyyy";
             this.dtpNgaySinhGV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinhGV.Location = new System.Drawing.Point(409, 77);
             this.dtpNgaySinhGV.Name = "dtpNgaySinhGV";
@@ -436,7 +426,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnTK;
         private System.Windows.Forms.TextBox txtTKGV;
         private System.Windows.Forms.ComboBox cbTKGV;
         private System.Windows.Forms.Button btnLuu;
