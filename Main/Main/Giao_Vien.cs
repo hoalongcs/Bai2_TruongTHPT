@@ -26,17 +26,17 @@ namespace Main
         public void KhoiTao()
         {
             txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = txtDiaChi.Enabled = false;
+            dtpNgaySinhGV.Enabled = false;
             btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = true;
             btnLuu.Enabled = false;
-            dtpNgaySinhGV.Enabled = false;
         }
 
         public void Mo()
         {
             txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = txtDiaChi.Enabled = true;
+            dtpNgaySinhGV.Enabled = true;
             btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
-            dtpNgaySinhGV.Enabled = true;
         }
 
         public void SetNull()
@@ -59,8 +59,6 @@ namespace Main
 
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           // try
-           // {
                 txtMaGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtHoTenGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cbGTGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -69,8 +67,6 @@ namespace Main
                 txtSDT.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtLuong.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[6].Value.ToString();
                 cbMonHoc.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[7].Value.ToString();
-          //  }
-           // catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
