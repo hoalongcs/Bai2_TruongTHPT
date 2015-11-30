@@ -12,7 +12,7 @@ namespace BUS
     {
         public DataTable Show()
         {
-            string sql = "select gv.MaGV, gv.HoTen, gv.GT, gv.NgaySinh, gv.DiaChi, gv.Luong, gv.SDT, mh.TenMon from tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
+            string sql = "SELECT gv.MaGV, gv.HoTen, gv.GT, gv.NgaySinh, gv.DiaChi, gv.Luong, gv.SDT, mh.TenMon FROM tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
             con.Open();
@@ -29,6 +29,7 @@ namespace BUS
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
+
             cmd.Parameters.AddWithValue("@HoTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
             cmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
@@ -49,6 +50,8 @@ namespace BUS
             con.Open();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaGV", MaGV);
             cmd.Parameters.AddWithValue("@HoTen", HoTen);
             cmd.Parameters.AddWithValue("@GT", GT);
             cmd.Parameters.AddWithValue("@NgaySinh", DateTime.Parse(NgaySinh));
@@ -56,7 +59,7 @@ namespace BUS
             cmd.Parameters.AddWithValue("@SDT", int.Parse(SDT));
             cmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
             cmd.Parameters.AddWithValue("@MaMon", Mon);
-            cmd.Parameters.AddWithValue("@MaGV", MaGV);
+           
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();
@@ -75,7 +78,7 @@ namespace BUS
             cmd.Dispose();
             con.Close();
         }
-
+        //lay thong tin mon hoc
         public DataTable LayThongTinMonHoc()
         {
             string sql = "SELECT * FROM tblMonHoc";

@@ -62,7 +62,6 @@ namespace Main
         {
             Mo();
             SetNull();
-            //txtTK_HS.Enabled = cbTK_HS.Enabled = true;
             txtMa_HS.Enabled = false;
             chon = 1;
         }
