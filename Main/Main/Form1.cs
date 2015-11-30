@@ -34,5 +34,11 @@ namespace Main
             Application.Exit();
         }
 
+        private void thôngTinGiảngDạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QLGD frm = new QLGD();
+            frm.Show();
+        }
+
     }
 }

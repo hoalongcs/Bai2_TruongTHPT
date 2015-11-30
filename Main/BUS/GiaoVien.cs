@@ -22,6 +22,18 @@ namespace BUS
             da.Dispose();
             return dt;
         }
+        public DataTable Show(string tenmon)
+        {
+            string sql = "SELECT gv.MaGV, gv.HoTen FROM tblGiaoVien gv, tblMonHoc mh where gv.MaMon = mh.MaMon and mh.TenMon=N'" + tenmon + "'";
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            con.Close();
+            da.Dispose();
+            return dt;
+        }
         public void ADDGiaoVien(string HoTen, string GT, string NgaySinh, string DiaChi, string SDT, string Luong, string MaMon)
         {
             string sql = "ADD_GV";
