@@ -12,7 +12,7 @@ namespace BUS
     {
         public DataTable Show(string tenlop)
         {
-            string sql = @"select l.TenLop, mh.TenMon, gv.HoTen, NgayDay, Tiet 
+            string sql = @"select mh.TenMon, gv.HoTen, NgayDay, Tiet 
                                 from CHITIETGIANGDAY ct, tblMonHoc mh, tblLop l, tblGiaoVien gv
                                 where ct.MaLop=l.MaLop and ct.MaMon=mh.MaMon and ct.MaGV=gv.MaGV and l.tenlop='" + tenlop + "'";
             DataTable dt = new DataTable();
@@ -36,6 +36,39 @@ namespace BUS
             cmd.Parameters.AddWithValue("@magv", magv);
             cmd.Parameters.AddWithValue("@ngayday", ngayday);
             cmd.Parameters.AddWithValue("@tiet", tiet);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
+        public void SuaCTGD(string malop, string mamon, string magv, string ngayday, int tiet)
+        {
+            string sql = "SuaCTGD";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@malop", malop);
+            cmd.Parameters.AddWithValue("@mamon", mamon);
+            cmd.Parameters.AddWithValue("@magv", magv);
+            cmd.Parameters.AddWithValue("@ngayday", ngayday);
+            cmd.Parameters.AddWithValue("@tiet", tiet);
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
+
+        //Xoa
+        public void XoaCTGD(string malop, string mamon)
+        {
+            string sql = "XoaCTGD";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@malop", malop);
+            cmd.Parameters.AddWithValue("@mamon", mamon);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();

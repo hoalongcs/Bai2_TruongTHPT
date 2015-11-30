@@ -36,26 +36,28 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.txtTiet = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNgayDay = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboTenGV = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboTenMon = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTim = new System.Windows.Forms.Button();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cboTenLop = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboTenLop);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.btnXoa);
@@ -63,14 +65,12 @@
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.txtTiet);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtNgayDay);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cboTenGV);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cboTenMon);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnTim);
-            this.panel1.Controls.Add(this.txtTenLop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -80,9 +80,9 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(440, 87);
+            this.btnThoat.Location = new System.Drawing.Point(440, 94);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(75, 33);
             this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             // 
             this.btnLuu.Location = new System.Drawing.Point(440, 55);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Size = new System.Drawing.Size(75, 33);
             this.btnLuu.TabIndex = 14;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(337, 119);
+            this.btnXoa.Location = new System.Drawing.Point(337, 133);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.Size = new System.Drawing.Size(75, 33);
             this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(337, 87);
+            this.btnSua.Location = new System.Drawing.Point(337, 94);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.Size = new System.Drawing.Size(75, 33);
             this.btnSua.TabIndex = 12;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             // 
             this.btnThem.Location = new System.Drawing.Point(337, 55);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(75, 33);
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -143,13 +143,6 @@
             this.label5.Size = new System.Drawing.Size(25, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Tiết";
-            // 
-            // txtNgayDay
-            // 
-            this.txtNgayDay.Location = new System.Drawing.Point(107, 111);
-            this.txtNgayDay.Name = "txtNgayDay";
-            this.txtNgayDay.Size = new System.Drawing.Size(184, 20);
-            this.txtNgayDay.TabIndex = 8;
             // 
             // label4
             // 
@@ -206,13 +199,6 @@
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // txtTenLop
-            // 
-            this.txtTenLop.Location = new System.Drawing.Point(107, 16);
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(184, 20);
-            this.txtTenLop.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -232,8 +218,10 @@
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(12, 184);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(544, 193);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -263,6 +251,24 @@
             this.Column4.HeaderText = "Tiết";
             this.Column4.Name = "Column4";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(108, 111);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
+            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.Value = new System.DateTime(2015, 11, 30, 0, 0, 0, 0);
+            // 
+            // cboTenLop
+            // 
+            this.cboTenLop.FormattingEnabled = true;
+            this.cboTenLop.Location = new System.Drawing.Point(108, 15);
+            this.cboTenLop.Name = "cboTenLop";
+            this.cboTenLop.Size = new System.Drawing.Size(183, 21);
+            this.cboTenLop.TabIndex = 17;
+            // 
             // QLGD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,19 +297,19 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtTiet;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNgayDay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboTenGV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboTenMon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cboTenLop;
     }
 }
