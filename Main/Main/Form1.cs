@@ -34,10 +34,5 @@ namespace Main
             Application.Exit();
         }
 
-        private void thôngTinGiảngDạyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TT_GiangDay tt_gd = new TT_GiangDay();
-            tt_gd.Show();
-        }
     }
 }

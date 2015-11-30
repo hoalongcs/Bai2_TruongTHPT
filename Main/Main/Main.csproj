@@ -67,11 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TT_GiangDay.cs">
+    <Compile Include="QLGD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TT_GiangDay.Designer.cs">
-      <DependentUpon>TT_GiangDay.cs</DependentUpon>
+    <Compile Include="QLGD.Designer.cs">
+      <DependentUpon>QLGD.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -91,8 +91,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TT_GiangDay.resx">
-      <DependentUpon>TT_GiangDay.cs</DependentUpon>
+    <EmbeddedResource Include="QLGD.resx">
+      <DependentUpon>QLGD.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

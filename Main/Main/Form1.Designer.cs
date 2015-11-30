@@ -88,9 +88,7 @@
             // 
             this.thôngTinGiảngDạyToolStripMenuItem.Name = "thôngTinGiảngDạyToolStripMenuItem";
             this.thôngTinGiảngDạyToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.thôngTinGiảngDạyToolStripMenuItem.Text = "Thông tin giảng dạy";
-            this.thôngTinGiảngDạyToolStripMenuItem.Click += new System.EventHandler(this.thôngTinGiảngDạyToolStripMenuItem_Click);
-            // 
+            this.thôngTinGiảngDạyToolStripMenuItem.Text = "Thông tin giảng dạy";            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
