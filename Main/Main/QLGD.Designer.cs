@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboTenLop = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cboTenLop = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(568, 178);
             this.panel1.TabIndex = 1;
+            // 
+            // cboTenLop
+            // 
+            this.cboTenLop.FormattingEnabled = true;
+            this.cboTenLop.Location = new System.Drawing.Point(108, 15);
+            this.cboTenLop.Name = "cboTenLop";
+            this.cboTenLop.Size = new System.Drawing.Size(183, 21);
+            this.cboTenLop.TabIndex = 17;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(108, 111);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
+            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimePicker1.Value = new System.DateTime(2015, 11, 30, 0, 0, 0, 0);
             // 
             // btnThoat
             // 
@@ -210,6 +228,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -250,24 +269,6 @@
             this.Column4.DataPropertyName = "Tiet";
             this.Column4.HeaderText = "Tiết";
             this.Column4.Name = "Column4";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 111);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker1.TabIndex = 16;
-            this.dateTimePicker1.Value = new System.DateTime(2015, 11, 30, 0, 0, 0, 0);
-            // 
-            // cboTenLop
-            // 
-            this.cboTenLop.FormattingEnabled = true;
-            this.cboTenLop.Location = new System.Drawing.Point(108, 15);
-            this.cboTenLop.Name = "cboTenLop";
-            this.cboTenLop.Size = new System.Drawing.Size(183, 21);
-            this.cboTenLop.TabIndex = 17;
             // 
             // QLGD
             // 

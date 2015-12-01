@@ -31,7 +31,8 @@ namespace Main
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(MessageBox.Show("Bạn Muốn Thoát Ứng dụng này?", "Question", MessageBoxButtons.YesNo)==DialogResult.Yes)
+                Application.Exit();
         }
 
         private void thôngTinGiảngDạyToolStripMenuItem_Click(object sender, EventArgs e)
