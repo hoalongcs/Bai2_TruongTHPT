@@ -1,9 +1,0 @@
-E:\Githubs\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.exe.config
-E:\Githubs\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.exe
-E:\Githubs\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.pdb
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Form1.resources
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Properties.Resources.resources
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.exe
-E:\Githubs\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.pdb
