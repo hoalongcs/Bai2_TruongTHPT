@@ -41,5 +41,12 @@ namespace Main
             frm.Show();
         }
 
+        private void hướngDẫnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHuongDan hd = new frmHuongDan();
+            hd.Show();
+            Hide();
+        }
+
     }
 }
