@@ -67,3 +67,4 @@ E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Properties.Resources.resources
 E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.QLGD.resources
 E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
 E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmHuongDan.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmDangNhap.resources
