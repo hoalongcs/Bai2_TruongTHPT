@@ -13,7 +13,7 @@ namespace BUS
         public DataTable Show(string tenlop)
         {
             string sql = @"select mh.TenMon, gv.HoTen, NgayDay, Tiet 
-                                from CHITIETGIANGDAY ct, tblMonHoc mh, tblLop l, tblGiaoVien gv
+                                from tblCTGD ct, tblMonHoc mh, tblLop l, tblGiaoVien gv
                                 where ct.MaLop=l.MaLop and ct.MaMon=mh.MaMon and ct.MaGV=gv.MaGV and l.tenlop='" + tenlop + "'";
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
@@ -40,7 +40,7 @@ namespace BUS
             cmd.Dispose();
             con.Close();
         }
-        public void SuaCTGD(string malop, string mamon, string magv, string ngayday, int tiet)
+        public void SuaCTGD(string malop, string mamon, string magv, DateTime ngayday, int tiet)
         {
             string sql = "SuaCTGD";
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
