@@ -13,3 +13,8 @@ C:\Users\PhamVanLuong^^\Documents\Main\BUS\bin\Debug\BUS.pdb
 C:\Users\PhamVanLuong^^\Documents\Main\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\PhamVanLuong^^\Documents\Main\BUS\obj\Debug\BUS.dll
 C:\Users\PhamVanLuong^^\Documents\Main\BUS\obj\Debug\BUS.pdb
+E:\Clone\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.dll
+E:\Clone\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.pdb
+E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.dll
+E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.pdb
