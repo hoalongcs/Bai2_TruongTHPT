@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
     <Compile Include="CTGD.cs" />
+    <Compile Include="DangNhap.cs" />
     <Compile Include="GiaoVien.cs" />
     <Compile Include="HocSinh.cs" />
     <Compile Include="Lop.cs" />

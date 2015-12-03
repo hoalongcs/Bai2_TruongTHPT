@@ -55,3 +55,18 @@ C:\Users\PhamVanLuong^^\Documents\Main\Main\obj\Debug\Main.Hoc_Sinh.resources
 C:\Users\PhamVanLuong^^\Documents\Main\Main\obj\Debug\Main.Properties.Resources.resources
 C:\Users\PhamVanLuong^^\Documents\Main\Main\obj\Debug\Main.QLGD.resources
 C:\Users\PhamVanLuong^^\Documents\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
+E:\Clone\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.exe
+E:\Clone\Bai2_TruongTHPT\Main\Main\bin\Debug\Main.pdb
+E:\Clone\Bai2_TruongTHPT\Main\Main\bin\Debug\BUS.dll
+E:\Clone\Bai2_TruongTHPT\Main\Main\bin\Debug\BUS.pdb
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csprojResolveAssemblyReference.cache
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Form1.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Giao_Vien.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Hoc_Sinh.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.Properties.Resources.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.QLGD.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.csproj.GenerateResource.Cache
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmHuongDan.resources
+E:\Clone\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmDangNhap.resources
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmDangNhap.resources
+D:\dung\Kì I - Năm 4\Thực tập nhóm\save\Bai2_TruongTHPT\Main\Main\obj\Debug\Main.frmHuongDan.resources
