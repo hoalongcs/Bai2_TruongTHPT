@@ -66,6 +66,12 @@ namespace Main
                                     Image img = Image.FromFile(@"b2 ttgd.png");
                                     pictureBox1.BackgroundImage = img;
                                 }
+                                else if (e.Node.Name == "gtSetAndControl")
+                                {
+                                    GetFileAll("HuongDanCaiDat.txt");
+                                    Image img = Image.FromFile(@"HuongDan.jpg");
+                                    pictureBox1.BackgroundImage = img;
+                                }
         }
 
         private void frmHuongDan_FormClosed(object sender, FormClosedEventArgs e)

@@ -41,6 +41,7 @@
             treeNode5});
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Giới thiệu phần mềm", new System.Windows.Forms.TreeNode[] {
             treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Hướng dẫn cài đặt vận hành ứng dụng");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtGioiThieu = new System.Windows.Forms.TextBox();
@@ -66,8 +67,11 @@
             treeNode6.Text = "Các chức năng";
             treeNode7.Name = "gtPhanMem";
             treeNode7.Text = "Giới thiệu phần mềm";
+            treeNode8.Name = "gtSetAndControl";
+            treeNode8.Text = "Hướng dẫn cài đặt vận hành ứng dụng";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7});
+            treeNode7,
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(172, 424);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trViewGioiThieu_AfterSelect);
