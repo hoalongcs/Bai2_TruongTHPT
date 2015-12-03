@@ -45,7 +45,14 @@ namespace Main
         {
             frmHuongDan hd = new frmHuongDan();
             hd.Show();
-            Hide();
+            this.Hide();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHuongDan hd = new frmHuongDan();
+            hd.Show();
+            this.Hide();
         }
 
     }
