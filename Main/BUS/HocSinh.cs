@@ -87,5 +87,16 @@ namespace BUS
             da.Fill(dt);
             return dt;
         }
+        public DataTable LayThongTinLop_MaLop(string MaLop)
+        {
+            string sql = "SELECT * FROM tblLop where MaLop = '" + MaLop + "'";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            da.Fill(dt);
+            con.Close();
+            return dt;
+        }
     }
 }

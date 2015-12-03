@@ -63,7 +63,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(22, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(334, 22);
+            this.label3.Size = new System.Drawing.Size(333, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Đăng nhập hệ thống quản lý trường học";
             // 
@@ -165,7 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDangNhap";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
