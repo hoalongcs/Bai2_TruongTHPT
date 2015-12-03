@@ -72,7 +72,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode7,
             treeNode8});
-            this.treeView1.Size = new System.Drawing.Size(172, 424);
+            this.treeView1.Size = new System.Drawing.Size(166, 424);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trViewGioiThieu_AfterSelect);
             // 
@@ -80,19 +80,19 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(172, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(166, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(546, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(552, 277);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // txtGioiThieu
             // 
             this.txtGioiThieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtGioiThieu.Location = new System.Drawing.Point(172, 277);
+            this.txtGioiThieu.Location = new System.Drawing.Point(166, 277);
             this.txtGioiThieu.Multiline = true;
             this.txtGioiThieu.Name = "txtGioiThieu";
-            this.txtGioiThieu.Size = new System.Drawing.Size(546, 147);
+            this.txtGioiThieu.Size = new System.Drawing.Size(552, 147);
             this.txtGioiThieu.TabIndex = 3;
             // 
             // frmHuongDan

@@ -41,7 +41,7 @@ namespace Main
             cboTenMon.Enabled = cboTenGV.Enabled = true;
             selection = 2;
         }
-
+        //Xóa Chi tiết giảng dạy
         private void btnXoa_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(cboTenMon.SelectedValue.ToString());
@@ -87,7 +87,7 @@ namespace Main
             cboTenMon.SelectedIndex = 0;
             cboTenMon.Enabled = cboTenGV.Enabled = false;
         }
-
+        //Tim Kiem Theo ten lớp
         private void btnTim_Click(object sender, EventArgs e)
         {
             if (cboTenLop.Text != "")
