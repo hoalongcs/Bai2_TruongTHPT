@@ -18,3 +18,8 @@ E:\Clone\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.pdb
 E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.dll
 E:\Clone\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.pdb
+E:\Githubs\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.dll
+E:\Githubs\Bai2_TruongTHPT\Main\BUS\bin\Debug\BUS.pdb
+E:\Githubs\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\Githubs\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.dll
+E:\Githubs\Bai2_TruongTHPT\Main\BUS\obj\Debug\BUS.pdb

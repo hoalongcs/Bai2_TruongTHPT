@@ -14,6 +14,7 @@ namespace BUS
         {
             string sql = "SELECT * FROM tblDangNhap WHERE UserName='" + Username + "' AND Pass='" + Pass + "'";
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(sql, con);
 
@@ -22,6 +23,7 @@ namespace BUS
             {
                 return true;
             }
+            con.Close();
             return false;
         }
     }
